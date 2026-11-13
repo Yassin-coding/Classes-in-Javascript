@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My planet cards</h1>
+    <button onclick="showPlanets()">Show Planets</button>
+    <div id="planet1"></div>
+    <div id="planet2"></div>
+    <div id="planet3"></div>
+    <script>
+        class Planet{
+            constructor(name,size,moons){
+                this.name = name;
+                this.size = size;
+                this.moons = moons;
+            }
+        }
+        function showPlanets(){
+            let planet1 = new Planet("earth", "12,742 km",1);
+            let planet2 = new Planet("mars","6,779 km",2);
+            let planet3 = new Planet("jupiter","142,984km",115);
+            document.getElementById("planet1").innerHTML = `Planet name: ${planet1.name}, Size: ${planet1.size}, Moons: ${planet1.moons}`;
+            document.getElementById("planet2").innerHTML = `Planet name: ${planet2.name}, Size: ${planet2.size}, Moons: ${planet2.moons}`;
+            document.getElementById("planet3").innerHTML = `Planet name: ${planet3.name}, Size: ${planet3.size}, Moons: ${planet3.moons}`;
+        }
+    </script>
+
+    
+</body>
+</html>
